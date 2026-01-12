@@ -18,6 +18,7 @@ function MyApp() {
       characterData={characters}
       removeCharacter={removeOneCharacter}
     />
+      <Form />
     </div>
   );
 }
