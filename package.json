@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run dev -w packages"
+    "dev": "npm run dev -w react-frontend"
   },
 "workspaces": [
 	"packages/*"
