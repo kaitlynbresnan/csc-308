@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run dev -w workspaces"
+    "dev": "npm run dev -w packages"
   },
 "workspaces": [
 	"packages/*"
