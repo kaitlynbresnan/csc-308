@@ -83,8 +83,17 @@ const addUser = (user) => {
   return user;
 };
 
+const generateID = () => {
+  return Math.random().toString(36).substring(2, 9);
+};
+
 app.post("/users", (req, res) => {
   const userToAdd = req.body;
-  addUser(userToAdd);
-  res.send();
+  const newUser = {
+    id: generateID(),
+    name: userToAdd.name,
+    job: userToAdd.job,
+  };
+  users.users_list.push(newUser);
+  res.status(201).json(newUser);
 });
