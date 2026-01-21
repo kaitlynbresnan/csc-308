@@ -97,3 +97,16 @@ app.post("/users", (req, res) => {
   users.users_list.push(newUser);
   res.status(201).json(newUser);
 });
+
+app.delete("/users/:id", (req, res) => {
+  const id = req.params.id;
+  const index = users.users_list.findIndex(
+    (user) => user.id === id
+    );
+  if (index === -1) {
+    res.status(404).send("not found");
+  } else {
+    users.users_list.splice(index, 1);
+    res.status(204).send();
+  }
+});
