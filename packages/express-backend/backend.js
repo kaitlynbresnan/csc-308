@@ -2,6 +2,21 @@
 import express from "express";
 import cors from "cors";
 import userServices from "./user-services.js"
+import mongoose from "mongoose";
+
+async function startServer() {
+  try {
+    await mongoose.connect("mongodb://localhost:27017/users")
+    app.listen(port, () => {
+      console.log('Server running')
+    });
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+}
+
+startServer();
 
 const app = express();
 const port = 8000;
