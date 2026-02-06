@@ -1,7 +1,7 @@
 // backend.js
 import express from "express";
 import cors from "cors";
-import userServices from "./user-services"
+import userServices from "./user-services.js"
 
 const app = express();
 const port = 8000;
@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
   console.log(
-    `Example app listening at http://localhost:${port}`
+    `Example app listening at http://localhost:${27017}`
   );
 });
 

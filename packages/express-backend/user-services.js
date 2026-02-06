@@ -43,7 +43,7 @@ function findUserByJob(job) {
 }
 
 function findUserByNameAndJob(name, job) {
-  return userModel.find({ name: name },{ job: job });
+  return userModel.find({ name, job });
 }
 
 function findUserByIdAndDelete(id) {
