@@ -19,7 +19,7 @@ function getUsers(name, job) {
   } else if (job && !name) {
     promise = findUserByJob(job);
   } else if (name && job) {
-    promise = findUserbyNameAndJob(name, job);
+    promise = findUserByNameAndJob(name, job);
   }
   return promise;
 }
