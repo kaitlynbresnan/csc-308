@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
   console.log(
-    `Example app listening at http://localhost:${27017}`
+    `Example app listening at http://localhost:${port}`
   );
 });
 
